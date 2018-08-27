@@ -1,0 +1,50 @@
+*
+!/**/
+!*.scala
+!*.conf
+!*.java
+!*.sbt
+!*.txt
+!*.md
+!*.xml
+!*.properties
+!*.sh
+!.travis.yml
+!.gitignore
+!.scalafmt.conf
+/target/
+/**/target/
+/project/**
+!/project/*.scala
+!/project/*.properties
+!/project/*.sbt
+
+/.idea/
+
+# for docs
+/docs/**
+!/docs/*.md
+
+# ast
+/ast/target/
+
+# jsonrpc
+!/jsonrpc/
+/jsonrpc/target/
+
+# interpreter
+!/interpreter/
+/interpreter/target/
+
+# sandbox
+!/sandbox/
+/sandbox/target/
+
+# contract-lib
+!/contract-lib/
+/contract-lib/target/
+
+/.ensime_cache/
+/crypto/target/
+
+!/**/docs/
