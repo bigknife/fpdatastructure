@@ -2,10 +2,13 @@ package trie
 
 import org.scalatest._
 import Trie._, Node._
+import io.circe._
+import io.circe.syntax._
+import io.circe.generic.auto._
 
 class TrieSpec extends FunSuite {
   test("make nodes") {
-    /*
+
     val b0 = Node(Array(0, 2, 4), "Hello")
     info(s"$b0, value = ${b0.get(Array(0, 2, 4))}")
     info(s"hash = ${b0.hexHash}")
@@ -30,10 +33,14 @@ class TrieSpec extends FunSuite {
     val b6 = b5.put("helloworld".getBytes, "hi")
     info(s"$b6, value = ${b6.get(Array(3, 4))}")
     info(s"hash = ${b6.hexHash}")
-    */
 
+    info(s"${b6.asJson}")
 
     val trie = Trie().put("hello,world".getBytes(), "Hello,world")
+
+
+    info(s"${trie.asJson}")
+
     info(s"${trie.get("hello,world".getBytes())}")
     info(s"${trie.rootHexHash}")
 
